@@ -1,0 +1,43 @@
+.app{max-width:900px;margin:0 auto;padding:1.5rem}
+.header{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid #222}
+.logo{font-size:1.4rem;font-weight:700;color:#e50914}
+.stats-bar{display:flex;gap:1rem;font-size:.8rem;color:#888;flex:1;flex-wrap:wrap}
+.btn-add{margin-left:auto;background:#e50914;color:#fff;border:none;padding:.5rem 1.2rem;border-radius:6px;cursor:pointer;font-weight:600}
+.controls{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem;align-items:center}
+.tabs{display:flex;gap:4px;background:#1a1a1a;border-radius:8px;padding:4px}
+.tab{padding:.4rem 1rem;border-radius:6px;border:none;cursor:pointer;font-size:.85rem;background:transparent;color:#888}
+.tab.active{background:#2a2a2a;color:#eee}
+.filters{display:flex;gap:.5rem;flex:1}
+.search{flex:1;padding:.45rem .75rem;border-radius:6px;border:1px solid #333;background:#1a1a1a;color:#eee;font-size:.85rem}
+.filters select{padding:.45rem .75rem;border-radius:6px;border:1px solid #333;background:#1a1a1a;color:#eee;font-size:.85rem}
+.loading,.empty{text-align:center;color:#555;padding:3rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem}
+.card{background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #2a2a2a}
+.card.watched{border-left:3px solid #2ecc71}
+.card.watchlist{border-left:3px solid #3498db}
+.poster{width:100%;aspect-ratio:2/3;object-fit:cover}
+.poster-placeholder{width:100%;aspect-ratio:2/3;display:flex;align-items:center;justify-content:center;font-size:3rem;background:#222}
+.card-body{padding:.75rem}
+.card-title{font-weight:600;font-size:.9rem;margin-bottom:.4rem}
+.card-meta{display:flex;flex-wrap:wrap;gap:.3rem;font-size:.75rem;color:#888;margin-bottom:.4rem}
+.badge{background:#2a2a2a;padding:1px 6px;border-radius:4px}
+.notes{font-size:.75rem;color:#999;margin-top:.3rem;font-style:italic}
+.stars{display:flex;gap:1px;margin:.3rem 0}
+.star{font-size:1rem;color:#555}
+.star.filled{color:#f1c40f}
+.star.clickable{cursor:pointer}
+.card-actions{display:flex;gap:.4rem;margin-top:.6rem;flex-wrap:wrap}
+.btn-watch{font-size:.7rem;padding:.3rem .6rem;border-radius:5px;border:1px solid #444;background:transparent;color:#aaa;cursor:pointer}
+.btn-watch.is-watched{background:#1a3a24;color:#2ecc71;border-color:#2ecc71}
+.btn-edit,.btn-del{padding:.3rem .5rem;border-radius:5px;border:1px solid #333;background:transparent;cursor:pointer;font-size:.75rem}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;z-index:100;padding:1rem}
+.modal{background:#1a1a1a;border-radius:12px;padding:1.5rem;width:100%;max-width:480px;border:1px solid #333}
+.modal h2{margin-bottom:1rem;font-size:1.1rem}
+.form-grid{display:flex;flex-direction:column;gap:.6rem}
+.form-grid input,.form-grid select,.form-grid textarea{padding:.5rem .75rem;border-radius:6px;border:1px solid #333;background:#111;color:#eee;font-size:.9rem;width:100%}
+.form-grid textarea{min-height:70px;resize:vertical}
+.form-rating{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:#aaa}
+.checkbox-label{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:#aaa;cursor:pointer}
+.modal-actions{display:flex;justify-content:flex-end;gap:.5rem;margin-top:1rem}
+.btn-cancel{padding:.5rem 1rem;border-radius:6px;border:1px solid #333;background:transparent;color:#aaa;cursor:pointer}
+.btn-save{padding:.5rem 1.2rem;border-radius:6px;border:none;background:#e50914;color:#fff;cursor:pointer;font-weight:600}
