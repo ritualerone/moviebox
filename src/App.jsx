@@ -158,7 +158,7 @@ export default function App() {
                   {m.poster_path
                     ? <img src={IMG + m.poster_path} alt={m.title} />
                     : <div className="no-poster">🎬</div>}
-                  <div>
+                                              <div className="tmdb-info">
                     <div className="tmdb-title">{m.title}</div>
                     <div className="tmdb-year">{m.release_date?.slice(0,4)}</div>
                   </div>
