@@ -43,3 +43,6 @@
 .tmdb-year{font-size:.7rem;color:#888}
 .modal-footer{margin-top:1rem;display:flex;justify-content:flex-end}
 .btn-cancel{padding:.5rem 1rem;border-radius:6px;border:1px solid #333;background:transparent;color:#aaa;cursor:pointer}
+.credits{text-align:center;font-size:.75rem;color:#555;padding:1.5rem 0 .5rem;border-top:1px solid #1a1a1a;margin-top:2rem}
+.credits a{color:#888;text-decoration:none}
+.credits a:hover{color:#e50914}
