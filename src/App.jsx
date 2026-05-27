@@ -91,7 +91,7 @@ export default function App() {
     watched: movies.filter(m => m.watched).length,
     avg: movies.filter(m => m.rating > 0).length
       ? (movies.filter(m => m.rating > 0).reduce((a, m) => a + m.rating, 0) / movies.filter(m => m.rating > 0).length).toFixed(1)
-      : '—'
+      : 'sem nota'
   }
 
   return (
@@ -99,8 +99,8 @@ export default function App() {
       <header className="header">
         <div className="logo">🎬 MovieBox</div>
         <div className="stats-bar">
-          <span>📽️ {stats.total}</span>
-          <span>✅ {stats.watched}</span>
+          <span>📽 {stats.total} filmes</span>
+          <span>✅ {stats.watched} assistidos</span>
           <span>⭐ {stats.avg}</span>
         </div>
         <button className="btn-add" onClick={() => setShowAdd(true)}>+ Adicionar</button>
@@ -116,7 +116,7 @@ export default function App() {
       </div>
 
       {loading ? <div className="loading">Carregando...</div> :
-       filtered.length === 0 ? <div className="empty">Nenhum filme 🍿 — clique em + Adicionar para buscar</div> : (
+       filtered.length === 0 ? <div className="empty">Nenhum filme ainda, clique em + Adicionar</div> : (
         <div className="grid">
           {filtered.map(movie => (
             <div key={movie.id} className={`card ${movie.watched?'watched':'watchlist'}`}>
@@ -129,7 +129,7 @@ export default function App() {
                 <StarRating value={movie.rating} onChange={r => setRating(movie, r)} />
                 <div className="card-actions">
                   <button className={`btn-watch ${movie.watched?'is-watched':''}`} onClick={() => toggleWatched(movie)}>
-                    {movie.watched ? '✅' : '👁️ Marcar'}
+                    {movie.watched ? '✅ Assistido' : '👁️ Marcar'}
                   </button>
                   <button className="btn-del" onClick={() => deleteMovie(movie.id)}>🗑️</button>
                 </div>
@@ -141,7 +141,8 @@ export default function App() {
 
       {showAdd && (
         <div className="modal-overlay" onClick={e => e.target === e.currentTarget && setShowAdd(false)}>
-          <h2>Buscar Filme</h2>
+          <div className="modal">
+            <h2>Buscar Filme</h2>
             <div className="search-box">
               <input
                 placeholder="Digite o nome do filme..."
